@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd"
+>
+<!--赋值-->
+<bean id="student" class="springzuoye1.Student">
+    <property name="name" value="小红"></property>
+    <property name="age" value="18"></property>
+    <property name="friendName">
+        <list>
+            <value>王昭君</value>
+            <value>小乔</value>
+            <value>大乔</value>
+            <value>貂蝉</value>
+            <value>孙尚香</value>
+        </list>
+    </property>
+    <property name="loverName">
+        <set>
+            <value>诸葛亮</value>
+            <value>孙悟空</value>
+            <value>赵云</value>
+            <value>鲁班</value>
+            <value>虞姬</value>
+        </set>
+    </property>
+    <property name="score">
+        <map>
+            <entry key="java" value="98"></entry>
+            <entry key="vue" value="78"></entry>
+            <entry key="jquery" value="120"></entry>
+        </map>
+    </property>
+    <property name="db">
+        <props>
+            <prop key="name">小乔</prop>
+            <prop key="pass">1654552</prop>
+        </props>
+    </property>
+
+</bean>
+
+
+</beans>
